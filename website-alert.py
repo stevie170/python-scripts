@@ -1,5 +1,6 @@
 # a Python script to alert on any change to a website
 # by Stevie Bird
+# ******************** THIS IS AN UNFINISHED SCRIPT - WORK IN PROGRESS! ********************
 
 # imports
 import time
