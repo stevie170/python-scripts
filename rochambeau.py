@@ -8,10 +8,12 @@ computer_score = 0
 player_score = 0
 
 # introduce the game
+print(\n)
 print("Let's play a game!")
 print("Ever heard of Rochambeau?")
-print("You might call it ""Rock, Paper, Scissors.""")
-print("Enter your choice, or type ""end"" to stop the game.")
+print("You might call it \"Rock, Paper, Scissors.\"")
+print("Enter your choice, or type \"end\" to stop the game.")
+print(\n)
 
 choices = ['Rock', 'Paper', 'Scissors']
 
