@@ -1,6 +1,31 @@
 # a Python chatbot
 # this is a simple rule-based chatbot
 
+# ---- install dependencies? still learning how to do this and this is not the way... ----
+# Install NLTK: run pip install --user -U nltk
+    
+# ---------------- setup ----------------
+# (should this be in a setup.py file? how does that work to put the python files into a package? do some research here, it feels important
+
+import pkg_resources
+import subprocess
+import sys
+import os
+
+REQUIRED = {
+  'nltk'
+}
+
+installed = {pkg.key for pkg in pkg_resources.working_set}
+missing = REQUIRED - installed
+
+if missing:
+    python = sys.executable
+    subprocess.check_call([python, '-m', 'pip', 'install', *missing], stdout=subprocess.DEVNULL)
+   
+# ---------------- end setup ----------------
+# ---- finished installing dependencies... or not since this probably didn't work...  ----
+
 from nltk.chat.util import Chat, reflections # import chatbot libraries
 
 # create a variable called 'pairs' that is a list of patterns and responses
