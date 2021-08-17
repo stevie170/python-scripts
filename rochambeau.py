@@ -14,9 +14,9 @@ print("You might call it ""Rock, Paper, Scissors.""")
 print("Enter your choice, or type ""end"" to stop the game.")
 
 choices = ['Rock', 'Paper', 'Scissors']
-computer = random.choice(choices)
 
 while True: # loop until the loop breaks
+  computer = random.choice(choices)
   player = input("rock, paper, or scissors? ").capitalize() # capitalize the input (first letter only) so it's easy to use in conditional statements
   
 # a series of conditionals to see who won and keep score
