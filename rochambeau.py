@@ -3,11 +3,6 @@
 
 import random
 
-choices = ['Rock', 'Paper', 'Scissors']
-
-computer = random.choice(choices)
-player = False
-
 # set base scores to 0
 computer_score = 0
 player_score = 0
@@ -18,6 +13,8 @@ print("Ever heard of Rochambeau?")
 print("You might call it ""Rock, Paper, Scissors.""")
 print("Enter your choice, or type ""end"" to stop the game.")
 
+choices = ['Rock', 'Paper', 'Scissors']
+computer = random.choice(choices)
 
 while True: # loop until the loop breaks
   player = input("rock, paper, or scissors? ").capitalize() # capitalize the input (first letter only) so it's easy to use in conditional statements
