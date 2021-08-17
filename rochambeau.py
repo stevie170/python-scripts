@@ -23,7 +23,7 @@ while True: # loop until the loop breaks
   player = input("rock, paper, or scissors? ").capitalize() # capitalize the input (first letter only) so it's easy to use in conditional statements
   
 # a series of conditionals to see who won and keep score
-  if player == computer
+  if player == computer:
     print("You both chose ", computer, ". Tie!")
     elif player == "Rock":
       if computer == "Paper":
