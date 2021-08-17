@@ -25,29 +25,32 @@ while True: # loop until the loop breaks
 # a series of conditionals to see who won and keep score
   if player == computer:
     print("You both chose ", computer, ". Tie!")
-    elif player == "Rock":
-      if computer == "Paper":
-        print("You lose! ", computer, " covers ", player, ".")
-        computer_score += 1  # add 1 to the computer's score
-      else:
-        print("You win! ", player, " smashes ", computer, ".")
-        player_score += 1  # add 1 to the player's score
-    elif player == "Paper":
-      if computer == "Scissors":
-        print("You lose! ", computer, " cut ", player, ".")
-        computer_score += 1  # add 1 to the computer's score
-      else:
-        print("You win! ", player, " covers ", computer, ".")
-        player_score += 1  # add 1 to the player's score
-    elif player == "Scissors":
-      if computer == "Rock":
-        print("You lose! ", computer, " smashes ", player, ".")
-        computer_score += 1  # add 1 to the computer's score
-      else:
-        print("You win! ", player, " cut ", computer, ".")
-        player_score += 1  # add 1 to the player's score
-    elif player == "End": # stop the game, print the score
-      print("Final Scores: ")
-      print(f"CPU:{computer_score}")
-      print(f"Player:{player_score}")
-      break # end the loop (note that this break is inside the conditional statement for if the player inputs "End."
+  elif player == "Rock":
+    if computer == "Paper":
+      print("You lose! ", computer, " covers ", player, ".")
+      computer_score += 1  # add 1 to the computer's score
+    else:
+      print("You win! ", player, " smashes ", computer, ".")
+      player_score += 1  # add 1 to the player's score
+  elif player == "Paper":
+    if computer == "Scissors":
+      print("You lose! ", computer, " cut ", player, ".")
+      computer_score += 1  # add 1 to the computer's score
+    else:
+      print("You win! ", player, " covers ", computer, ".")
+      player_score += 1  # add 1 to the player's score
+  elif player == "Scissors":
+    if computer == "Rock":
+      print("You lose! ", computer, " smashes ", player, ".")
+      computer_score += 1  # add 1 to the computer's score
+    else:
+      print("You win! ", player, " cut ", computer, ".")
+      player_score += 1  # add 1 to the player's score
+  elif player == "End": # stop the game, print the score
+    print("Final Scores: ")
+    print(f"CPU:{computer_score}")
+    print(f"Player:{player_score}")
+    break # end the loop (note that this break is inside the conditional statement for if the player inputs "End."
+  else: # stop the game, error
+    print("Invalid input. Hope you'll try again!"
+    break # end the loop (note that this break is inside the conditional statement for if the player inputs "End."
