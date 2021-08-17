@@ -5,11 +5,11 @@ import random
 
 play = ["rock", "paper", "scissors"]
 
-comp = random.choice(play)
+computer = random.choice(play)
 player = False
 
 # set base scores to 0
-comp_score = 0
+computer_score = 0
 player_score = 0
 
 # introduce the game
@@ -23,31 +23,31 @@ while True: # loop until the loop breaks
   player = input("rock, paper, or scissors? ").capitalize() # capitalize the input (first letter only) so it's easy to use in conditional statements
   
 # a series of conditionals to see who won and keep score
-  if player == comp
-    print("You both chose ", comp, ". Tie!")
+  if player == computer
+    print("You both chose ", computer, ". Tie!")
     elif player == "Rock":
-      if comp == "Paper":
-        print("You lose! ", comp, " covers ", player, ".")
-        comp_score += 1  # add 1 to the computer's score
+      if computer == "Paper":
+        print("You lose! ", computer, " covers ", player, ".")
+        computer_score += 1  # add 1 to the computer's score
       else:
-        print("You win! ", player, " smashes ", comp, ".")
+        print("You win! ", player, " smashes ", computer, ".")
         player_score += 1  # add 1 to the player's score
     elif player == "Paper":
-      if comp == "Scissors":
-        print("You lose! ", comp, " cut ", player, ".")
-        comp_score += 1  # add 1 to the computer's score
+      if computer == "Scissors":
+        print("You lose! ", computer, " cut ", player, ".")
+        computer_score += 1  # add 1 to the computer's score
       else:
-        print("You win! ", player, " covers ", comp, ".")
+        print("You win! ", player, " covers ", computer, ".")
         player_score += 1  # add 1 to the player's score
     elif player == "Scissors":
-      if comp == "Rock":
-        print("You lose! ", comp, " smashes ", player, ".")
-        comp_score += 1  # add 1 to the computer's score
+      if computer == "Rock":
+        print("You lose! ", computer, " smashes ", player, ".")
+        computer_score += 1  # add 1 to the computer's score
       else:
-        print("You win! ", player, " cut ", comp, ".")
+        print("You win! ", player, " cut ", computer, ".")
         player_score += 1  # add 1 to the player's score
     elif player == "End": # stop the game, print the score
       print("Final Scores: ")
-      print(f"CPU:{comp_score}")
+      print(f"CPU:{computer_score}")
       print(f"Player:{player_score}")
       break # end the loop (note that this break is inside the conditional statement for if the player inputs "End."
