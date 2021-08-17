@@ -1,5 +1,6 @@
 # a Python chatbot
 # this is a simple rule-based chatbot
+# and it needs to be tested and debugged...
 
 # ---- install dependencies? still learning how to do this and this is not the way... ----
 # Install NLTK: run pip install --user -U nltk
