@@ -40,15 +40,15 @@ t = input('Which term best describes what you would like to learn about? ')
 term = term_list[t]
 
 # get wikipedia data
-wiki_data = wikipedia.page(term)
+w = wikipedia.page(term)
 
 # present wikipedia data to user
 print('\n')
-print(f'{term} - Wikipedia entry for', wiki_data.title, 
+print(f'{term} - Wikipedia entry for', w.title)
 print('\n')
-print(wiki_data.content)
+print(w.content)
 print('\n')
-print('Source:', wiki_data.url) 
+print('Source:', w.url) 
           
 
 # wikipedia options:
