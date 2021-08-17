@@ -2,6 +2,8 @@
 # by Stevie Bird
 # ****** work in progress! moving on to a more advanced application of Python... ******
 
+# ok I still need to run this to see if it works....
+
 # ---------------- setup ----------------
 # (should this be in a setup.py file? how does that work to put the python files into a package? do some research here, it feels important
 
@@ -23,6 +25,8 @@ if missing:
    
 # ---------------- end setup ----------------
   
+import wikipedia 
+
 # display an intro to the user (directions)
 
 # what user input is expected? initialize any variables that need initial values then prompt for input
