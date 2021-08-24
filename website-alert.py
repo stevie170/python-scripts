@@ -53,7 +53,7 @@ while True:
         print("error")
         
 
-## here is the credentials answer: 
+## here is one credentials answer: 
 ## (to be implemented later when I work on this project again)
 ## make a seperate file and save it somewhere outside the project. Now do chmod 600, i.e. allow only root to access the file. 
 ## Now in your code run read the file by running in the the superuser mode. Or you could also create a different user which 
