@@ -139,7 +139,7 @@ my_own_reflections= {
 }
 
 #default message at the start of chat
-print("Hi, I'm thecleverprogrammer and I like to chat\nPlease type lowercase English language to start a conversation. Type quit to leave ")
+print("Hi, I'm Number 5 and I like to chat\nPlease type lowercase English language to start a conversation. Type quit to leave ")
 #Create Chat Bot
 chat = Chat(pairs, my_own_reflections)
 
