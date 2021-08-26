@@ -49,15 +49,15 @@ pairs = [
     ],
     [
         r"sorry (.*)",
-        ["It's alright.","It's OK, never mind that.","No problem.",]
+        ["It's alright.","It's OK, never mind that.","No problem.","No worries.","Don't worry about it!",]
     ],
     [
         r"i'm (.*) (good|well|okay|ok)",
-        ["Nice to hear that.","Alright, great!",]
+        ["Nice to hear that.","Alright, great!","OK.",]
     ],
     [
         r"(hi|hey|hello|hola|holla)(.*)",
-        ["Hello.", "Hey there.", "Nice to chat.",]
+        ["Hello.", "Hey there.", "Nice to chat.","Hi.",]
     ],
     [
         r"what (.*) want?",
