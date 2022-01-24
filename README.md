@@ -11,7 +11,7 @@ It's [Google Colabs](https://colab.research.google.com/?utm_source=scs-index).
 
 ## Index
 
-| CTF | Link | Notes |
+| Script | Link | Notes |
 |:---:|:---:|:---:|
 | Rochambeau - a simple game of Rock, Paper, Scissors | [/rochambeau.py](https://github.com/stevie170/python-scripts/blob/main/rochambeau.py) | user input, while loop, conditionals, and Python's *random* module |
 | Password Generator - user is prompted for a password length and given a password of that length | [/password-generator.py](https://github.com/stevie170/python-scripts/blob/main/password-generator.py) | user input, strings, and Python's *random* module |
