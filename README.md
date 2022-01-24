@@ -2,7 +2,7 @@
 
 ## Tools
 
-### Google Colabs
+### Google Colaboratory
 
 I found a tool that I think I'll love!
 It's [Google Colabs](https://colab.research.google.com/?utm_source=scs-index). 
