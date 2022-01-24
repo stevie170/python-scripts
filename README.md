@@ -1,6 +1,10 @@
-# python-scripts
+# Python Scripts
 
 ## Tools
+
+### Python Documentation
+
+Is anyone else a documentation geek like me? Here's [a link to Python's documentation page](https://docs.python.org/3.10/index.html). There's even a great [tutorial](https://docs.python.org/3.10/tutorial/index.html) if you want to jump in and learn!
 
 ### Google Colaboratory
 
@@ -17,4 +21,5 @@ It's [Google Colabs](https://colab.research.google.com/?utm_source=scs-index).
 | Password Generator - user is prompted for a password length and given a password of that length | [/password-generator.py](https://github.com/stevie170/python-scripts/blob/main/password-generator.py) | user input, strings, and Python's *random* module |
 | Story Generator - a python script to generate a random story each time it's run | [/story-generator.py](https://github.com/stevie170/python-scripts/blob/main/story-generator.py) | needs refining; strings, arrays, and Python's *random* module |
 | Website Alert - a Python script to alert on any change to a website | [/website-alert.py](https://github.com/stevie170/python-scripts/blob/main/website-alert.py) | incomplete / work in progress; still trying to figure out a few things in this one; hashing, while loops, try/except, and Python's *time* and *hashlib* modules |
+||||
 ||||
