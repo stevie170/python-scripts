@@ -6,10 +6,19 @@
 # Install NLTK: run pip install --user -U nltk
     
 # ---------------- setup ----------------
-# (should this be in a setup.py file? how does that work to put the python files into a package? do some research here, it feels important
+# (should this be in a setup.py file? how does that work to put the python files into a package? do some research here, 
+# it feels like an important / essential skill)
 
-import pkg_resources
-import subprocess
+import pkg_resources # module that allows API access to managing Python's active packages, but may not be the best thing here... 
+# I used it before relizing that it's not the best option, and now I'm rethinking! **************
+# From the documentation:
+# Use of pkg_resources is discouraged in favor of importlib.resources, importlib.metadata, and their backports (resources, metadata). 
+# Please consider using those libraries instead of pkg_resources.
+# So one of my next steps with this code would be to learn about those other modules and replace all calls to pkg_resources with one of those options
+# what i need it to do is see what packages are installed; then subprocess is used to install a missing package
+# I pretty much have no idea what I'm doing here
+
+import subprocess # module that allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes
 import sys
 import os
 
@@ -22,14 +31,14 @@ missing = REQUIRED - installed
 
 if missing:
     python = sys.executable
-    subprocess.check_call([python, '-m', 'pip', 'install', *missing], stdout=subprocess.DEVNULL)
+    subprocess.check_call([python, '-m', 'pip', 'install', *missing], stdout=subprocess.DEVNULL) # run the python commands with the given arguments; stdout=subprocess.DEVNULL suppresses stdout
    
 # ---------------- end setup ----------------
 # ---- finished installing dependencies... or not since this probably didn't work...  ----
 
 from nltk.chat.util import Chat, reflections # import chatbot libraries
 
-# create a variable called 'pairs' that is a list of patterns and responses
+# create a variable called 'pairs' that is a list of patterns and responses that the chatbot can use
 pairs = [
     [
         r"(.*)my name is (.*)",
@@ -116,7 +125,7 @@ pairs = [
 # 'you': 'me',
 # 'me': 'you'}
 
-# if I want to create my own reflections dictionary? 
+# if I want to create my own reflections dictionary? a dictionary of words to use to reflect back the input in the form of a response
 my_own_reflections= {
     'go'     : 'gone',
     'hello'    : 'hey there',
@@ -141,7 +150,7 @@ my_own_reflections= {
 #default message at the start of chat
 print("Hi, I'm Number 5 and I like to chat\nPlease type lowercase English language to start a conversation. Type quit to leave ")
 #Create Chat Bot
-chat = Chat(pairs, my_own_reflections)
+chat = Chat(pairs, my_own_reflections) 
 
 #Start conversation
 chat.converse()
