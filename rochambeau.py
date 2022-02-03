@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # a Python script to play the game rochambeau (rock, paper, scissors)
 # user vs computer
 
