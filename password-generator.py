@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # password generator: user is prompted for a password length and given a password of that length
 # This is an application of python and does not necessarily generate secure passwords. A secure password is one that is long and easily remembered, such as a passphrase.
 # Passwords such as these (random characters of the desired password length) are more likely to be written down, and thus less secure.
