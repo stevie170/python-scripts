@@ -1,34 +1,25 @@
+#!/usr/bin/env python3
+
 # a Python script that prompts the user for a topic and gives the user options for what to learn about the topic
 # by Stevie Bird
 # ****** work in progress! moving on to a more advanced application of Python... ******
 
-# ok I still need to run this to see if it works....
-
 # ---------------- setup ----------------
-# (should this be in a setup.py file? how does that work to put the python files into a package? do some research here, it feels important
+# should this be in a setup.py file? hmm I think that would only be necessary for long programs... here is a good tutorial https://www.teclado.com/30-days-of-python/python-30-day-21-multiple-files
 
-import pkg_resources
-import subprocess
-import sys
-import os
+# this uses the wikipedia API 
 
-REQUIRED = {
-  'wikipedia'
-}
+try:
+    import wikipedia 
+except: 
+    print('\nWikipedia API is not installed. Try again after installing the wikipedia API using the following command: \npython3 -m pip install wikipedia\n')
+    # raise ValueError("Type an error to display here") # would this stop running the script and display the error??
+    quit() # stop running the script
 
-installed = {pkg.key for pkg in pkg_resources.working_set}
-missing = REQUIRED - installed
-
-if missing:
-    python = sys.executable
-    subprocess.check_call([python, '-m', 'pip', 'install', *missing], stdout=subprocess.DEVNULL)
-   
 # ---------------- end setup ----------------
   
-import wikipedia 
 
-# display an intro to the user (directions)
-
+# display an intro to the user (directions)??
 # what user input is expected? initialize any variables that need initial values then prompt for input
 term = input('What would you like to learn about? ')
 
@@ -36,11 +27,12 @@ term = input('What would you like to learn about? ')
 # present the first 10 options
 term_list = wikipedia.search(term, results=10)
 
-# print a list of the terms for the user to choose one  
+# print a list of the terms for the user to choose one 
+print('Here are some options:\n') 
 i = len(term_list)  # get the number of returned search terms 
 for x in range(i):
     print(x, term_list[x])
-t = input('Which term best describes what you would like to learn about? ') 
+t = int(input('Which term best describes what you would like to learn about? ')) 
 term = term_list[t]
 
 # get wikipedia data
@@ -54,8 +46,10 @@ print(w.content)
 print('\n')
 print('Source:', w.url) 
           
-
+# if I want to make this a little more complicated....
+#
 # wikipedia options:
+#
 # related terms
 # print(wikipedia.search("Python"))
 # topic summary
