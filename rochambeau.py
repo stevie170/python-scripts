@@ -53,5 +53,6 @@ while True: # loop until the loop breaks
     print(f"Player: {player_score}")
     break # end the loop (note that this break is inside the conditional statement for if the player inputs "End."
   else: # stop the game, error
-    print("Invalid input. Hope you'll try again!")
-    break # end the loop (note that this break is inside the conditional statement for if the player inputs "End."
+    print("Invalid input. Hope you'll try again!") # can I use a while loop to prompt for a valid input instead? Kind of like how I did with the password generator? Hmmm...
+    break # end the loop (note that this break is inside the conditional statement for if the player enters invalid input.
+
