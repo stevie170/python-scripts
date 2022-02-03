@@ -35,16 +35,17 @@ while True:
             print("the web site changed") # notify
             
             # connect to the gmail server and send an email to notify of change
-            try:
-                server = smtplib.SMTP('smtp.gmail.com', 587) # create SMTP session
-                server.starttls() # start TLS for security
-                server.login("sender_email_id", "sender_email_id_password") # use credentials to authenticate to gmail
+            # I've commented this code out because it's not actually functional without credentials, and it would be ridiculous to include credentials in the actual code...
+            # try:
+            #     server = smtplib.SMTP('smtp.gmail.com', 587) # create SMTP session
+            #     server.starttls() # start TLS for security
+            #     server.login("sender_email_id", "sender_email_id_password") # use credentials to authenticate to gmail
                 # how to authenticate without including credentials in the script? not just the password but email addresses too!
-                message = "Message to send"
-                server.sendmail("sender_email_id", "receiver_email_id", message) # send the message
-                s.quit() # terminate the SMTP session
-            except:
-                print 'Couldn\'t connect to gmail...'
+            #     message = "Message to send"
+            #     server.sendmail("sender_email_id", "receiver_email_id", message) # send the message
+            #     s.quit() # terminate the SMTP session
+            # except:
+            #     print 'Couldn\'t connect to gmail...'
             
             time.sleep(30) # wait 30 seconds
             continue
@@ -53,8 +54,8 @@ while True:
         print("error")
         
 
-## here is one credentials answer: 
-## (to be implemented later when I work on this project again)
+## here is one credentials answer I found that could be worth trying: 
+## (to be considered later when I work on this project again)
 ## make a seperate file and save it somewhere outside the project. Now do chmod 600, i.e. allow only root to access the file. 
 ## Now in your code run read the file by running in the the superuser mode. Or you could also create a different user which 
 ## can access the file and run the code using that user.
